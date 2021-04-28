@@ -62,7 +62,7 @@
     margin-top: 100px;
   }
   .hours-contact {
-    height: 400px;
+    height: 450px;
   }
   .reviews-box {
     height: 300px;
@@ -74,7 +74,7 @@
 
 @media (min-width: 100px) {
   .main-text {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 }
 
@@ -203,4 +203,11 @@
   font-family: OpenSansLight;
   font-weight: bolder;
   margin-top: 7px;
+  /* width: 300px;
+  margin-left: 40px; */
+}
+
+.contact-header {
+  font-size: 30px;
+  font-family: OpenSansBold;
 }

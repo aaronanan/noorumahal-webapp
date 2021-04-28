@@ -11,6 +11,7 @@ function App() {
     <>
       <div style={{ display: "flex" }}>
         <SideBar />
+
         <Main />
       </div>
       {/* <Footer /> */}

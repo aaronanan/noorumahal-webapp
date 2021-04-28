@@ -50,11 +50,41 @@ const Main = () => {
               <img
                 src={Dosa}
                 width="100%"
-                style={{ filter: "brightness(70%)" }}
+                style={{ filter: "brightness(90%)" }}
               />
               <div class="centered">
                 <p class="main-text">
                   Authentic <br /> Indian Cusine
+                </p>
+                <p class="sub-text">Elegant falvours and traditional dishes.</p>
+                {/* <button type="button" class="btn-main">
+                  Order Now
+                </button> */}
+                <span
+                  class="btn-main"
+                  data-glf-cuid="89d4a1f6-f7ee-4850-893d-48f43a76dcdb"
+                  data-glf-ruid="ec598645-ca7b-4f20-be93-c841f69c32eb"
+                >
+                  See MENU & Order
+                </span>
+              </div>
+            </div>
+          </div>
+        </MediaQuery>
+        <MediaQuery maxWidth={599}>
+          <div class="row " style={{ height: "400px" }}>
+            <div class="shop">
+              <div
+                style={{
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                  marginTop: "90px",
+                  width: "fit-content",
+                  color: "white",
+                }}
+              >
+                <p class="main-text" style={{ width: "300px" }}>
+                  Authentic Indian Cusine
                 </p>
                 <p class="sub-text">Elegant falvours and traditional dishes.</p>
                 <button type="button" class="btn-main">
@@ -62,16 +92,15 @@ const Main = () => {
                 </button>
               </div>
             </div>
-          </div>
-        </MediaQuery>
-        <MediaQuery maxWidth={599}>
-          <div class="row" style={{ height: "400px" }}>
-            <div class="container-image">
+            {/* <div class="container-image">
               <img
                 src={DosaLG}
                 width="100%"
                 height="400px"
-                style={{ filter: "brightness(80%)" }}
+                style={{
+                  filter: "brightness(80%)",
+                  // marginLeft: "-80px",
+                }}
               />
               <div class="centered">
                 <p class="main-text" style={{ width: "300px" }}>
@@ -82,7 +111,7 @@ const Main = () => {
                   Order Now
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
         </MediaQuery>
 
@@ -124,7 +153,7 @@ const Main = () => {
           </div>
         </div>
 
-        <div class="row" style={{ marginBottom: "50px" }}>
+        <div class="row" style={{ marginBottom: "50px", marginTop: "20px" }}>
           <div class="col-12">
             <Carousel animation="slide">
               {items.map((item, i) => (
@@ -136,7 +165,7 @@ const Main = () => {
 
         <div class="row">
           <div
-            class="col-lg-6 p-3 text-center"
+            class="col-lg-6 p-3"
             style={{
               height: "350px",
               color: "white",
@@ -144,14 +173,22 @@ const Main = () => {
             }}
           >
             <div class="top-space">
-              <div class="hours-header">Hours of Operation</div>
-              <div class="hours-text">Monday: 5pm - 11pm</div>
-              <div class="hours-text">Tuesday: CLOSED</div>
-              <div class="hours-text">Wednesday: 12pm - 3pm, 5pm - 11pm</div>
-              <div class="hours-text">Thursday: 12pm - 3pm, 5pm - 11pm</div>
-              <div class="hours-text">Friday: 12pm - 3pm, 5pm - 11pm</div>
-              <div class="hours-text">Saturday: 12pm - 11pm</div>
-              <div class="hours-text">Sunday: 12pm - 11pm</div>
+              <div class="hours-header text-center">Hours of Operation</div>
+              <div
+                style={{
+                  marginLeft: "auto",
+                  width: "fit-content",
+                  marginRight: "auto",
+                }}
+              >
+                <div class="hours-text">Monday: 5pm - 11pm</div>
+                <div class="hours-text">Tuesday: CLOSED</div>
+                <div class="hours-text">Wednesday: 12pm - 3pm, 5pm - 11pm</div>
+                <div class="hours-text">Thursday: 12pm - 3pm, 5pm - 11pm</div>
+                <div class="hours-text">Friday: 12pm - 3pm, 5pm - 11pm</div>
+                <div class="hours-text">Saturday: 12pm - 11pm</div>
+                <div class="hours-text">Sunday: 12pm - 11pm</div>
+              </div>
             </div>
           </div>
           <div
@@ -161,7 +198,9 @@ const Main = () => {
             <div class="top-space">
               <div class="row">
                 <div class="col-12">
-                  <p class="h3">Want to contact us? Send us a message</p>
+                  <p class="contact-header">
+                    Want to contact us? Send us a message
+                  </p>
                 </div>
               </div>
               <div class="row justify-content-center align-items-center top-space">
@@ -198,8 +237,12 @@ const Main = () => {
                   ></textarea>
                 </div>
               </div>
-              <button type="button" class="btn btn-secondary top-space">
-                Order Now
+              <button
+                type="button"
+                class="btn-main top-space"
+                style={{ backgroundColor: "grey" }}
+              >
+                Submit
               </button>
             </div>
           </div>
