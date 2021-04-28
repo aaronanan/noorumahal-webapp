@@ -7,9 +7,13 @@
 
 .shop {
   width: 100%;
-  background: url("/src/assets/dosa.png");
-  height: 450px;
+  background: url("/src/assets/dishes-2.png");
+  height: 380px;
   background-attachment: fixed;
+  /* filter: brightness(90%); */
+  /* filter: blur(1px); */
+  /* background-repeat: no-repeat; */
+  background-size: cover;
 }
 
 /* Centered text */
@@ -18,6 +22,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: left;
 }
 
 .hours-contact {
@@ -28,6 +33,24 @@
   height: 200px;
 }
 
+.main-text {
+  font-family: OrginalSurfer;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.sub-text {
+  font-family: OpenSansLight;
+  font-size: 25px;
+  /* font-weight: bolder; */
+}
+.promo-text {
+  font-size: 40px;
+  font-family: OrginalSurfer;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: white;
+}
+
 @media (max-width: 633px) {
   .input-space {
     margin-top: 10px;
@@ -36,13 +59,16 @@
 
 @media (max-width: 599px) {
   .main-top {
-    margin-top: 56px;
+    margin-top: 100px;
   }
   .hours-contact {
     height: 400px;
   }
   .reviews-box {
     height: 300px;
+  }
+  .promo-text {
+    font-size: 30px;
   }
 }
 
@@ -85,4 +111,96 @@
 
 .top-space {
   margin-top: 20px;
+}
+
+.sidebar-text {
+  color: white;
+  font-family: OrginalSurfer;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.btn-main {
+  text-decoration: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  /* font-weight: 700; */
+  border-radius: 30px;
+  font-size: 16px;
+  padding: 15px 40px;
+  background: #ed8227;
+  font-family: OrginalSurfer;
+}
+
+.btn-promo {
+  text-decoration: none;
+  border: none;
+  outline: none;
+  color: black;
+  /* font-weight: 700; */
+  border-radius: 30px;
+  font-size: 19px;
+  padding: 15px 40px;
+  background: white;
+  font-family: OrginalSurfer;
+  /* filter: brightness(100%); */
+}
+
+.btn-main:hover {
+  background-color: #ec964b;
+}
+
+.btn-promo:hover {
+  background-color: #aaaaaa;
+}
+
+.about-h3 {
+  color: rgba(37, 37, 37, 0.7);
+  font-size: 30px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-family: OpenSansLight;
+}
+
+.about-h1 {
+  font-size: 40px;
+  color: #252525;
+  font-weight: 700;
+  line-height: 40px;
+  margin-bottom: 15px;
+  font-family: OrginalSurfer;
+}
+.about-p {
+  font-size: 20px;
+  color: #757575;
+  /* font-weight: 500; */
+  font-family: OpenSansLight;
+  font-weight: bolder;
+}
+
+.review-header {
+  font-family: OpenSansLight;
+  font-weight: bolder;
+}
+.review-text {
+  /* font-family: OpenSansLight; */
+  font-size: 20px;
+  color: #757575;
+  /* font-weight: 500; */
+  font-family: OpenSansLight;
+  font-weight: bolder;
+}
+
+.hours-header {
+  font-size: 35px;
+  font-family: OpenSansBold;
+}
+
+.hours-text {
+  font-size: 20px;
+  font-family: OpenSansLight;
+  font-weight: bolder;
+  margin-top: 7px;
 }

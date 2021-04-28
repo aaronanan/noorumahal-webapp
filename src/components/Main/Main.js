@@ -30,8 +30,8 @@ function Item(props) {
     <div class="row justify-content-center align-items-center reviews-box">
       <div class="col-12 col-lg-6">
         <Paper class="text-center">
-          <h2>{props.item.name}</h2>
-          <p>{props.item.description}</p>
+          <h2 class="review-header">{props.item.name}</h2>
+          <p class="review-text">{props.item.description}</p>
         </Paper>
       </div>
     </div>
@@ -40,15 +40,24 @@ function Item(props) {
 const Main = () => {
   return (
     <>
-      <div class="container-fluid main-top">
+      <div
+        class="container-fluid main-top"
+        style={{ backgroundColor: "whitesmoke" }}
+      >
         <MediaQuery minWidth={599}>
           <div class="row">
             <div class="container-image">
-              <img src={Dosa} width="100%" />
+              <img
+                src={Dosa}
+                width="100%"
+                style={{ filter: "brightness(70%)" }}
+              />
               <div class="centered">
-                <p class="main-text">Authentic Indian Cusine</p>
-                <p>Elegant falvours and traditional dishes.</p>
-                <button type="button" class="btn btn-secondary">
+                <p class="main-text">
+                  Authentic <br /> Indian Cusine
+                </p>
+                <p class="sub-text">Elegant falvours and traditional dishes.</p>
+                <button type="button" class="btn-main">
                   Order Now
                 </button>
               </div>
@@ -58,11 +67,18 @@ const Main = () => {
         <MediaQuery maxWidth={599}>
           <div class="row" style={{ height: "400px" }}>
             <div class="container-image">
-              <img src={DosaLG} width="100%" height="400px" />
+              <img
+                src={DosaLG}
+                width="100%"
+                height="400px"
+                style={{ filter: "brightness(80%)" }}
+              />
               <div class="centered">
-                <p class="main-text">Authentic Indian Cusine</p>
-                <p>Elegant falvours and traditional dishes.</p>
-                <button type="button" class="btn btn-secondary">
+                <p class="main-text" style={{ width: "300px" }}>
+                  Authentic Indian Cusine
+                </p>
+                <p class="sub-text">Elegant falvours and traditional dishes.</p>
+                <button type="button" class="btn-main">
                   Order Now
                 </button>
               </div>
@@ -72,15 +88,15 @@ const Main = () => {
 
         <div
           class="row justify-content-center align-items-center"
+          id="about"
           style={{ marginTop: "50px", marginBottom: "50px" }}
         >
           <div className="col-lg-4 p-25">
-            <h3>About Us</h3>
-            <h1>
-              WELCOME TO <br />
-              NOORU MAHAL
+            <h3 class="about-h3">About Us</h3>
+            <h1 class="about-h1">
+              OUR STORY <br />
             </h1>
-            <p>
+            <p class="about-p">
               Nooru Mahal is a Vancouver, British Columbia based restaurant
               serving South Indian, Sri Lankan and Singaporean Cuisine. We have
               been operating in Vancouver over 10 years.
@@ -94,17 +110,21 @@ const Main = () => {
         <div class="row">
           <div class="shop">
             <div class="text-center">
-              <p class="h1" style={{ marginTop: "150px" }}>
+              <p class="promo-text" style={{ marginTop: "120px" }}>
                 Order Online Pickup for 10% OFF
               </p>
-              <button type="button" class="btn btn-secondary">
+              <button
+                type="button"
+                class="btn-main"
+                // style={{ backgroundColor: "white", color: "black" }}
+              >
                 Order Now
               </button>
             </div>
           </div>
         </div>
 
-        <div class="row">
+        <div class="row" style={{ marginBottom: "50px" }}>
           <div class="col-12">
             <Carousel animation="slide">
               {items.map((item, i) => (
@@ -116,18 +136,22 @@ const Main = () => {
 
         <div class="row">
           <div
-            class="col-lg-6 p-3 text-center bg-dark"
-            style={{ height: "350px", color: "white" }}
+            class="col-lg-6 p-3 text-center"
+            style={{
+              height: "350px",
+              color: "white",
+              backgroundColor: "#ed8227",
+            }}
           >
             <div class="top-space">
-              <div class="h3">Hours of Operation</div>
-              <div class="h6">Monday: 5pm - 10pm</div>
-              <div class="h6">Tuesday: 5pm - 10pm</div>
-              <div class="h6">Wednesday: 5pm - 10pm</div>
-              <div class="h6">Thursday: 5pm - 10pm</div>
-              <div class="h6">Friday: 5pm - 10pm</div>
-              <div class="h6">Saturday: 5pm - 10pm</div>
-              <div class="h6">Sunday: 5pm - 10pm</div>
+              <div class="hours-header">Hours of Operation</div>
+              <div class="hours-text">Monday: 5pm - 11pm</div>
+              <div class="hours-text">Tuesday: CLOSED</div>
+              <div class="hours-text">Wednesday: 12pm - 3pm, 5pm - 11pm</div>
+              <div class="hours-text">Thursday: 12pm - 3pm, 5pm - 11pm</div>
+              <div class="hours-text">Friday: 12pm - 3pm, 5pm - 11pm</div>
+              <div class="hours-text">Saturday: 12pm - 11pm</div>
+              <div class="hours-text">Sunday: 12pm - 11pm</div>
             </div>
           </div>
           <div

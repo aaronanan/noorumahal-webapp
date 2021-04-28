@@ -1,53 +1,56 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import AppBar from '@material-ui/core/AppBar';
-import CssBaseline from '@material-ui/core/CssBaseline';
-import Divider from '@material-ui/core/Divider';
-import Drawer from '@material-ui/core/Drawer';
-import Hidden from '@material-ui/core/Hidden';
-import IconButton from '@material-ui/core/IconButton';
-import InboxIcon from '@material-ui/icons/MoveToInbox';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import MailIcon from '@material-ui/icons/Mail';
-import MenuIcon from '@material-ui/icons/Menu';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import MediaQuery from 'react-responsive';
-import Logo from '../../assets/nm-logo.png'
+import React from "react";
+import PropTypes from "prop-types";
+import AppBar from "@material-ui/core/AppBar";
+import CssBaseline from "@material-ui/core/CssBaseline";
+import Divider from "@material-ui/core/Divider";
+import Drawer from "@material-ui/core/Drawer";
+import Hidden from "@material-ui/core/Hidden";
+import IconButton from "@material-ui/core/IconButton";
+import InboxIcon from "@material-ui/icons/MoveToInbox";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import ListItemText from "@material-ui/core/ListItemText";
+import MailIcon from "@material-ui/icons/Mail";
+import MenuIcon from "@material-ui/icons/Menu";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import MediaQuery from "react-responsive";
+import Logo from "../../assets/nm-logo.png";
+import "./Main.css";
 
 const drawerWidth = 200;
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
+    display: "flex",
   },
   drawer: {
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up("sm")]: {
       width: drawerWidth,
       flexShrink: 0,
     },
   },
   appBar: {
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up("sm")]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
     },
+    backgroundColor: "#292929",
   },
   menuButton: {
     marginRight: theme.spacing(2),
-    [theme.breakpoints.up('sm')]: {
-      display: 'none',
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
     },
   },
   // necessary for content to be below app bar
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
-    backgroundColor: "grey"
+    backgroundColor: "#292929",
+    // borderRight: "3px solid lightgrey",
   },
   content: {
     flexGrow: 1,
@@ -66,33 +69,46 @@ function ResponsiveDrawer(props) {
   };
 
   const drawer = (
-    <div>
+    <div style={{ marginLeft: "10px" }}>
       <div>
-        <img src={Logo} width="100px" style={{marginLeft:"auto", marginRight:"auto", display:"block"}}/>
+        <img
+          src={Logo}
+          width="150px"
+          // style={{ marginLeft: "auto", marginRight: "auto", display: "block" }}
+          style={{ marginTop: "20px", marginLeft: "8px" }}
+        />
       </div>
 
       {/* <div className={classes.toolbar} /> */}
       {/* <Divider /> */}
-      <List>
-        <ListItem button key="About">
-          <ListItemText primary="About" />
-        </ListItem>
-        <ListItem button key="Menu">
-          <ListItemText primary="Menu" />
-        </ListItem>
-        <ListItem button key="Order">
-          <ListItemText primary="Order" />
-        </ListItem>
-        <ListItem button key="Promotions">
-          <ListItemText primary="Promotions" />
-        </ListItem>
-        {/* {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+      <div style={{ marginTop: "-30px" }}>
+        <List>
+          <a href="#about">
+            <ListItem button key="About">
+              <p class="sidebar-text">About</p>
+              {/* <ListItemText primary="About" /> */}
+            </ListItem>
+          </a>
+          <ListItem button key="Menu">
+            {/* <ListItemText primary="Menu" /> */}
+            <p class="sidebar-text">Menu</p>
+          </ListItem>
+          <ListItem button key="Order">
+            {/* <ListItemText primary="Order" /> */}
+            <p class="sidebar-text">Order</p>
+          </ListItem>
+          <ListItem button key="Promotions">
+            {/* <ListItemText primary="Promotions" /> */}
+            <p class="sidebar-text">Promotions</p>
+          </ListItem>
+          {/* {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem button key={text}>
             <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
             <ListItemText primary={text} />
           </ListItem>
         ))} */}
-      </List>
+        </List>
+      </div>
       {/* <Divider />
       <List>
         {['All mail', 'Trash', 'Spam'].map((text, index) => (
@@ -105,28 +121,32 @@ function ResponsiveDrawer(props) {
     </div>
   );
 
-  const container = window !== undefined ? () => window().document.body : undefined;
+  const container =
+    window !== undefined ? () => window().document.body : undefined;
 
   return (
     <div className={classes.root}>
       <CssBaseline />
       <MediaQuery maxWidth={599}>
-      <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
-            className={classes.menuButton}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap>
-            Responsive drawer
-          </Typography>
-        </Toolbar>
-      </AppBar>
+        <AppBar position="fixed" className={classes.appBar}>
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              className={classes.menuButton}
+            >
+              <MenuIcon />
+            </IconButton>
+            <div style={{ marginLeft: "70px" }}>
+              <img src={Logo} width="100px" />
+            </div>
+            {/* <Typography variant="h6" noWrap>
+              Responsive drawer
+            </Typography> */}
+          </Toolbar>
+        </AppBar>
       </MediaQuery>
       <nav className={classes.drawer} aria-label="mailbox folders">
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
@@ -134,7 +154,7 @@ function ResponsiveDrawer(props) {
           <Drawer
             container={container}
             variant="temporary"
-            anchor={theme.direction === 'rtl' ? 'right' : 'left'}
+            anchor={theme.direction === "rtl" ? "right" : "left"}
             open={mobileOpen}
             onClose={handleDrawerToggle}
             classes={{
