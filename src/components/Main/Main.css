@@ -1,0 +1,64 @@
+/* Container holding the image and the text */
+.container-image {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.shop {
+  width: 100%;
+  background: url("/src/assets/dosa.png");
+  height: 450px;
+  background-attachment: fixed;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 599px) {
+  .main-top {
+    margin-top: 56px;
+  }
+}
+
+@media (min-width: 100px) {
+  .main-text {
+    font-size: 1.5rem;
+  }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (min-width: 767.98px) {
+  .main-text {
+    font-size: 2rem;
+  }
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (min-width: 991.98px) {
+  .main-text {
+    font-size: 2.5rem;
+  }
+}
+
+/* // Large devices (desktops, less than 1200px) */
+@media (min-width: 1199.98px) {
+  .main-text {
+    font-size: 3rem;
+  }
+}
+
+/* // X-Large devices (large desktops, less than 1400px) */
+/* @media (min-width: 1399.98px) {
+  .main-text {
+    font-size: 3rem;
+  }
+} */
+/* .main-text {
+  font-size: 3rem;
+} */
