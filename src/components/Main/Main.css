@@ -20,9 +20,29 @@
   transform: translate(-50%, -50%);
 }
 
+.hours-contact {
+  height: 350px;
+}
+
+.reviews-box {
+  height: 200px;
+}
+
+@media (max-width: 633px) {
+  .input-space {
+    margin-top: 10px;
+  }
+}
+
 @media (max-width: 599px) {
   .main-top {
     margin-top: 56px;
+  }
+  .hours-contact {
+    height: 400px;
+  }
+  .reviews-box {
+    height: 300px;
   }
 }
 
@@ -62,3 +82,7 @@
 /* .main-text {
   font-size: 3rem;
 } */
+
+.top-space {
+  margin-top: 20px;
+}
