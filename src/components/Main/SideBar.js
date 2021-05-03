@@ -71,12 +71,14 @@ function ResponsiveDrawer(props) {
   const drawer = (
     <div style={{ marginLeft: "10px" }}>
       <div>
-        <img
-          src={Logo}
-          width="150px"
-          // style={{ marginLeft: "auto", marginRight: "auto", display: "block" }}
-          style={{ marginTop: "20px", marginLeft: "8px" }}
-        />
+        <a href="/">
+          <img
+            src={Logo}
+            width="150px"
+            // style={{ marginLeft: "auto", marginRight: "auto", display: "block" }}
+            style={{ marginTop: "20px", marginLeft: "8px" }}
+          />
+        </a>
       </div>
 
       {/* <div className={classes.toolbar} /> */}
