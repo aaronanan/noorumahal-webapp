@@ -57,25 +57,13 @@
   }
 }
 
-@media (max-width: 599px) {
-  .main-top {
-    margin-top: 100px;
-  }
-  .hours-contact {
-    height: 450px;
-  }
-  .reviews-box {
-    height: 300px;
-  }
-  .promo-text {
-    font-size: 30px;
-  }
-}
-
 @media (min-width: 100px) {
   .main-text {
     font-size: 2rem;
   }
+  /* .sub-text {
+    font-size: 15px;
+  } */
 }
 
 /* Small devices (landscape phones, less than 768px) */
@@ -109,6 +97,24 @@
   font-size: 3rem;
 } */
 
+@media (max-width: 599px) {
+  .main-top {
+    margin-top: 100px;
+  }
+  .hours-contact {
+    height: 450px;
+  }
+  .reviews-box {
+    height: 300px;
+  }
+  .promo-text {
+    font-size: 30px;
+  }
+  .main-text {
+    font-size: 2rem;
+  }
+}
+
 .top-space {
   margin-top: 20px;
 }
@@ -116,7 +122,7 @@
 .sidebar-text {
   color: white;
   font-family: OrginalSurfer;
-  font-size: 20px;
+  font-size: 18px;
   text-transform: uppercase;
   font-weight: bolder;
 }
@@ -210,4 +216,9 @@
 .contact-header {
   font-size: 30px;
   font-family: OpenSansBold;
+}
+@media (max-width: 1340px) {
+  .contact-header {
+    font-size: 20px;
+  }
 }

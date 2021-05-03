@@ -91,15 +91,33 @@ function ResponsiveDrawer(props) {
           </a>
           <ListItem button key="Menu">
             {/* <ListItemText primary="Menu" /> */}
-            <p class="sidebar-text">Menu</p>
+            <a
+              data-glf-cuid="89d4a1f6-f7ee-4850-893d-48f43a76dcdb"
+              data-glf-ruid="ec598645-ca7b-4f20-be93-c841f69c32eb"
+            >
+              <p class="sidebar-text">Menu</p>
+            </a>
           </ListItem>
           <ListItem button key="Order">
             {/* <ListItemText primary="Order" /> */}
-            <p class="sidebar-text">Order</p>
+            <a
+              data-glf-cuid="89d4a1f6-f7ee-4850-893d-48f43a76dcdb"
+              data-glf-ruid="ec598645-ca7b-4f20-be93-c841f69c32eb"
+            >
+              <p class="sidebar-text">Order</p>
+            </a>
           </ListItem>
           <ListItem button key="Promotions">
             {/* <ListItemText primary="Promotions" /> */}
-            <p class="sidebar-text">Promotions</p>
+            <a href="#promo">
+              <p class="sidebar-text">Promotions</p>
+            </a>
+          </ListItem>
+          <ListItem button key="Contact">
+            {/* <ListItemText primary="Promotions" /> */}
+            <a href="#contact">
+              <p class="sidebar-text">Contact Us</p>
+            </a>
           </ListItem>
           {/* {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem button key={text}>

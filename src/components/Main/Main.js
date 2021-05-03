@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Dosa from "../../assets/dosa.png";
 import DosaLG from "../../assets/dosaog.jpg";
 import Restaurant from "../../assets/restaurant.jpg";
@@ -6,7 +6,8 @@ import "./Main.css";
 import MediaQuery from "react-responsive";
 
 import Carousel from "react-material-ui-carousel";
-import { Paper, Button } from "@material-ui/core";
+import { Paper } from "@material-ui/core";
+import { Modal, Button } from "react-bootstrap";
 
 var items = [
   {
@@ -25,6 +26,7 @@ var items = [
       "So this is one of my family’s favourite restaurants because 1) they offer the best Kothu Roti in town, 2) friendly service and 3) they have one of my family’s beloved foods – Kothu Roti :).",
   },
 ];
+
 function Item(props) {
   return (
     <div class="row justify-content-center align-items-center reviews-box">
@@ -38,13 +40,17 @@ function Item(props) {
   );
 }
 const Main = () => {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <div
         class="container-fluid main-top"
         style={{ backgroundColor: "whitesmoke" }}
       >
-        <MediaQuery minWidth={599}>
+        <MediaQuery minWidth={840}>
           <div class="row">
             <div class="container-image">
               <img
@@ -60,18 +66,18 @@ const Main = () => {
                 {/* <button type="button" class="btn-main">
                   Order Now
                 </button> */}
-                <span
+                <button
                   class="btn-main"
                   data-glf-cuid="89d4a1f6-f7ee-4850-893d-48f43a76dcdb"
                   data-glf-ruid="ec598645-ca7b-4f20-be93-c841f69c32eb"
                 >
                   See MENU & Order
-                </span>
+                </button>
               </div>
             </div>
           </div>
         </MediaQuery>
-        <MediaQuery maxWidth={599}>
+        <MediaQuery maxWidth={840}>
           <div class="row " style={{ height: "400px" }}>
             <div class="shop">
               <div
@@ -87,8 +93,13 @@ const Main = () => {
                   Authentic Indian Cusine
                 </p>
                 <p class="sub-text">Elegant falvours and traditional dishes.</p>
-                <button type="button" class="btn-main">
-                  Order Now
+                <button
+                  type="button"
+                  class="btn-main"
+                  data-glf-cuid="89d4a1f6-f7ee-4850-893d-48f43a76dcdb"
+                  data-glf-ruid="ec598645-ca7b-4f20-be93-c841f69c32eb"
+                >
+                  See MENU & Order
                 </button>
               </div>
             </div>
@@ -136,7 +147,7 @@ const Main = () => {
           </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="promo">
           <div class="shop">
             <div class="text-center">
               <p class="promo-text" style={{ marginTop: "120px" }}>
@@ -145,6 +156,8 @@ const Main = () => {
               <button
                 type="button"
                 class="btn-main"
+                data-glf-cuid="89d4a1f6-f7ee-4850-893d-48f43a76dcdb"
+                data-glf-ruid="ec598645-ca7b-4f20-be93-c841f69c32eb"
                 // style={{ backgroundColor: "white", color: "black" }}
               >
                 Order Now
@@ -163,7 +176,7 @@ const Main = () => {
           </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="contact">
           <div
             class="col-lg-6 p-3"
             style={{
@@ -241,6 +254,7 @@ const Main = () => {
                 type="button"
                 class="btn-main top-space"
                 style={{ backgroundColor: "grey" }}
+                onClick={handleShow}
               >
                 Submit
               </button>
@@ -248,6 +262,20 @@ const Main = () => {
           </div>
         </div>
       </div>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Contact Us</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>***Contact Form Not Implemented***</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Cancel
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Send
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 };
